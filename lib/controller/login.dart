@@ -13,11 +13,11 @@ class _LoginPageState extends State<LoginPage> {
 
   void _login() {
     // just for test
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => HomePage()),
-    );
-    return;
+    // Navigator.pushReplacement(
+    //   context,
+    //   MaterialPageRoute(builder: (context) => HomePage()),
+    // );
+    // return;
     if (_emailController.text == 'admin@example.com' &&
         _passwordController.text == '123456') {
       Navigator.pushReplacement(
