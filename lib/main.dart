@@ -1,10 +1,10 @@
+import 'package:blog/controller/login.dart';
+import 'package:blog/controller/postPage.dart';
 import 'package:blog/views/aboutPage.dart';
 import 'package:blog/views/basePage.dart';
 import 'package:blog/views/contactPage.dart';
 import 'package:blog/views/myBlogPage.dart';
 import 'package:blog/views/postBlogPage.dart';
-import 'package:blog/controller/login.dart';
-import 'package:blog/controller/postPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -40,19 +40,6 @@ class MyBlogApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  final List<Map<String, String>> posts = [
-    {
-      'title': 'Buổi gặp mặt đầu năm',
-      'date': '01/01/2025',
-      'image': 'https://via.placeholder.com/400x200',
-    },
-    {
-      'title': 'Dã ngoại cuối tuần',
-      'date': '15/03/2025',
-      'image': 'https://via.placeholder.com/400x200',
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -177,37 +164,13 @@ class HomePage extends StatelessWidget {
             ),
             Postpage(),
             const SizedBox(height: 20),
-            GridView.count(
-              crossAxisCount: 2,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
+            Container(
               padding: const EdgeInsets.all(16),
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
-              children: posts.map((post) {
-                return Card(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(post['image']!),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          post['title']!,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text(post['date']!),
-                      ),
-                    ],
-                  ),
-                );
-              }).toList(),
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'RECENT POST',
+                style: TextStyle(fontSize: 18, letterSpacing: 2),
+              ),
             ),
           ],
         ),

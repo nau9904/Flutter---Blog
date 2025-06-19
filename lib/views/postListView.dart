@@ -1,7 +1,7 @@
+import 'package:blog/viewmodels/postViewModel.dart';
+import 'package:blog/widgets/customCard.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:blog/viewmodels/postViewModel.dart';
-
 
 class PostListView extends StatelessWidget {
   @override
@@ -9,22 +9,24 @@ class PostListView extends StatelessWidget {
     final viewModel = Provider.of<PostViewModel>(context);
 
     return Scaffold(
-
       body: viewModel.isLoading
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
               itemCount: viewModel.posts.length,
               itemBuilder: (context, index) {
                 final post = viewModel.posts[index];
-                return ListTile(
-                  title: Text(post.title),
-                  subtitle: Text(post.content),
-                );
+                return CustomCard(
+                    postTitle: post.title,
+                    postContent: post.content,
+                    postDate: post.date,
+                    postAuthor: post.author!,
+                    postImageUrl: post.imageUrl);
               },
             ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => viewModel.loadPosts(),
-        child: Icon(Icons.refresh),
+        child: Icon(Icons.refresh, color: Colors.green),
+        backgroundColor: Colors.pink[300],
       ),
     );
   }
