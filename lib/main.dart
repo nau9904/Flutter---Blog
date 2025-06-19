@@ -1,8 +1,8 @@
-import 'package:blog/View/aboutPage.dart';
-import 'package:blog/View/basePage.dart';
-import 'package:blog/View/contactPage.dart';
-import 'package:blog/View/myBlogPage.dart';
-import 'package:blog/View/postBlogPage.dart';
+import 'package:blog/views/aboutPage.dart';
+import 'package:blog/views/basePage.dart';
+import 'package:blog/views/contactPage.dart';
+import 'package:blog/views/myBlogPage.dart';
+import 'package:blog/views/postBlogPage.dart';
 import 'package:blog/controller/login.dart';
 import 'package:blog/controller/postPage.dart';
 import 'package:flutter/material.dart';

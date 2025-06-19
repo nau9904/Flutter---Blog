@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:blog/viewmodels/postViewModel.dart';
 
 class Myblogpage extends StatelessWidget {
   const Myblogpage({super.key});
@@ -6,7 +7,7 @@ class Myblogpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("My Blog Page")),
+      body: Center(child: PostViewModel()),
     );
   }
 }
