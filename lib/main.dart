@@ -43,55 +43,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.grey[500],
-      //   actions: [
-      //     TextButton(
-      //         onPressed: () {
-      //           print('go to home page');
-      //         },
-      //         child: const Text('Home', style: TextStyle(color: Colors.white))),
-      //     TextButton(
-      //         onPressed: () {
-      //           print('go to about page');
-      //           Navigator.pushNamed(context, '/about');
-      //         },
-      //         child:
-      //             const Text('About', style: TextStyle(color: Colors.white))),
-      //     TextButton(
-      //         onPressed: () {
-      //           print('go to my blog page');
-      //           Navigator.pushNamed(context, '/myblog');
-      //         },
-      //         child:
-      //             const Text('My Blog', style: TextStyle(color: Colors.white))),
-      //     TextButton(
-      //         onPressed: () {
-      //           print('go to contact page');
-      //           Navigator.pushNamed(context, '/contact');
-      //         },
-      //         child:
-      //             const Text('Contact', style: TextStyle(color: Colors.white))),
-      //     IconButton(
-      //         onPressed: () {
-      //           print('facebook button clicked');
-      //         },
-      //         icon: const Icon(Icons.facebook)),
-      //     IconButton(
-      //         onPressed: () {
-      //           print('send email button clicked');
-      //         },
-      //         icon: const Icon(Icons.email_rounded)),
-      //     IconButton(
-      //       onPressed: () {
-      //         print('post button clicked');
-      //         Navigator.pushNamed(context, '/postblog');
-      //       },
-      //       icon: const Icon(Icons.add_comment_rounded),
-      //       color: Colors.greenAccent,
-      //     ),
-      //   ],
-      // ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:blog/widgets/custom_text.dart';
 
 class CustomCard extends StatelessWidget {
   final String postTitle;
@@ -39,7 +40,7 @@ class CustomCard extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Text(postContent),
+                child: CustomText(postContent),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),

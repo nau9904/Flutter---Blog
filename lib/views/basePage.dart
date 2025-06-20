@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class BasePage extends StatelessWidget {
   final Widget child;
@@ -37,11 +39,20 @@ class BasePage extends StatelessWidget {
             child: const Text('Contact', style: TextStyle(color: Colors.white)),
           ),
           IconButton(
-            onPressed: () {
-              print('facebook button clicked');
-            },
-            icon: const Icon(Icons.facebook),
-          ),
+  onPressed: () async {
+    final Uri facebookUrl = Uri.parse('https://www.facebook.com/yourpage');
+    if (await canLaunchUrl(facebookUrl)) {
+      await launchUrl(
+        facebookUrl,
+        mode: LaunchMode.externalApplication, // Opens in browser or external app
+      );
+    } else {
+      print('Could not launch $facebookUrl');
+    }
+  },
+  icon: const Icon(Icons.facebook),
+),
+
           IconButton(
             onPressed: () {
               print('send email button clicked');
