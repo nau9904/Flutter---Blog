@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:blog/models/post.dart';
-import 'package:blog/services/postService.dart';
+import 'package:blog/services/post_service.dart';
 
 class PostViewModel extends ChangeNotifier {
   final PostService _service = PostService();

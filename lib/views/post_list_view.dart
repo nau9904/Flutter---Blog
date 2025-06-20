@@ -1,4 +1,4 @@
-import 'package:blog/viewmodels/postViewModel.dart';
+import 'package:blog/viewmodels/post_view_model.dart';
 import 'package:blog/widgets/customCard.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

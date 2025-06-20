@@ -1,5 +1,5 @@
-import 'package:blog/viewmodels/postViewModel.dart';
-import 'package:blog/views/postListView.dart';
+import 'package:blog/viewmodels/post_view_model.dart';
+import 'package:blog/views/post_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
